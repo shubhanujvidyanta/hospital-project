@@ -1,0 +1,14 @@
+<style>
+#tabs{}
+.ui-widget-header {
+	font-size: 16px;
+   background:#b9cd6d;
+   border: 1px solid #b9cd6d;
+   color: #8F602B;
+   font-weight: bold;
+}
+#tabs{}.ui-widget-content{
+	font-size:14px;
+	color: #7B90C0;
+}
+</style>
