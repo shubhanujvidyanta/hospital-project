@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+<hibernate-mapping>
+   <class name="personal.shubhanuj.hospital.model.PatientDetails" table="PATIENTDETAILS">
+      <meta attribute="class-description">
+         This class contains the patient details mapping. 
+      </meta>
+      <id name="patientId" type="int" column="patient_id"/>
+      <property name="firstName" column="first_name" type="string"/>
+      <property name="lastName" column="last_name" type="string"/>
+      <property name="addressId" column="address_id" type="int"/>
+      <property name="phone1" column="phone1" type="string"/>
+      <property name="phone2" column="phone2" type="string"/>
+      <property name="email" column="email" type="string"/>
+      <property name="comments" column="comments" type="string"/>
+   </class>
+</hibernate-mapping>
