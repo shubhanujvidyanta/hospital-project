@@ -22,6 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 import personal.shubhanuj.hospital.DAO.PatientAppointmentJDBCTemplate;
 import personal.shubhanuj.hospital.DAO.PatientRegistrationDao;
 import personal.shubhanuj.hospital.DAO.PatientRegistrationDaoImpl;
+import personal.shubhanuj.hospital.DAO.PatientRegistrationHibernateDAOImpl;
 import personal.shubhanuj.hospital.exception.ApplicationException;
 import personal.shubhanuj.hospital.exception.BusinessException;
 import personal.shubhanuj.hospital.model.PatientAppointment;
@@ -94,7 +95,7 @@ public class WelcomeController {
 				model.addAttribute("error",messageSource.getMessage("passwordMismatch", null, "Password Mismatch", null));
 				throw new BusinessException(messageSource.getMessage("passwordMismatch", null, "Password Mismatch", null));
 			}
-			PatientRegistrationDao patientRegObj=(PatientRegistrationDaoImpl) context.getBean("patientRegistration");
+			PatientRegistrationDao patientRegObj=(PatientRegistrationHibernateDAOImpl) context.getBean("patientRegistration");
 			patientRegObj.insertMember();
 			String patientId=patientRegObj.insertPatient(registration);
 			model.addAttribute("registrationSuccess",messageSource.getMessage("registrationSuccess", null, "!", null));

@@ -51,7 +51,7 @@ public class DatabaseTableUtils {
 		}
 		return mbrroleId;
 	}
-	public static String getLastAddressId(Connection connection) throws ApplicationException{
+	/*public static String getLastAddressId(Connection connection) throws ApplicationException{
 		String addressId=null;
 		try{
 			String addressIdQuery="select id_value+1 as address_id from tablekeys where table_name=?";
@@ -69,7 +69,7 @@ public class DatabaseTableUtils {
 			throw new ApplicationException(exp.getMessage());
 		}
 		return addressId;
-	}
+	}*/
 	public static void insertAddress(Connection connection,String addressId) throws ApplicationException{
 		try{
 			String insertAddressQuery="insert into address values(?,?,?,?,?,?,?,?,?,?,?)";
