@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+<hibernate-mapping>
+   <class name="personal.shubhanuj.hospital.model.Patient" table="PATIENT">
+      <meta attribute="class-description">
+         This class contains the patient mapping. 
+      </meta>
+      <id name="patientId" type="int" column="patient_id"/>
+      <property name="patientTypeId" column="patienttype_id" type="int"/>
+      <property name="admitTypeId" column="admittype_id" type="int"/>
+      <property name="admit" column="admit" type="int"/>
+      <property name="RegistrationDate" column="regdate" type="string"/>
+   </class>
+</hibernate-mapping>

@@ -36,7 +36,7 @@ public class PatientRegistrationDaoImpl implements PatientRegistrationDao {
 	public void insertMember() throws ApplicationException{
 		setMemberId(DatabaseTableUtils.getLastIdforTable(connection,"member"));
 		setMbrroleId(DatabaseTableUtils.getMbrroleId(connection,"patient"));
-		setAddressId(DatabaseTableUtils.getLastAddressId(connection));
+		setAddressId(DatabaseTableUtils.getLastIdforTable(connection,"address"));
 		try{
 		String insertMemberQuery="insert into member values(?,?,?,?)";
 		PreparedStatement prepStatement=connection.prepareStatement(insertMemberQuery);
@@ -55,9 +55,6 @@ public class PatientRegistrationDaoImpl implements PatientRegistrationDao {
 		String insertPatientDetailsQuery=null;
 		String updateTablekeysMember=null;
 		String updateTablekeysAddress=null;
-		setMemberId(DatabaseTableUtils.getLastIdforTable(connection,"member"));
-		setMbrroleId(DatabaseTableUtils.getMbrroleId(connection,"patient"));
-		setAddressId(DatabaseTableUtils.getLastAddressId(connection));
 		try{
 		insertPatientQuery="insert into patient values(?,?,?,?,?)";
 		PreparedStatement insertPatientStatement=connection.prepareStatement(insertPatientQuery);

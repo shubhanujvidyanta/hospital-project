@@ -15,7 +15,8 @@
 	
 	<bean id="registration" class="personal.shubhanuj.hospital.model.PatientRegistration"></bean>
 	<bean id="appointment" class="personal.shubhanuj.hospital.model.PatientAppointment"></bean>
-	<bean id="patientRegistration" class="personal.shubhanuj.hospital.DAO.PatientRegistrationDaoImpl"></bean>  
+	<!-- <bean id="patientRegistration" class="personal.shubhanuj.hospital.DAO.PatientRegistrationDaoImpl"></bean> -->  
+	<bean id="patientRegistration" class="personal.shubhanuj.hospital.DAO.PatientRegistrationHibernateDAOImpl"></bean>
 	<bean id = "PatientAppointment" class = "personal.shubhanuj.hospital.DAO.PatientAppointmentJDBCTemplate">
       <property name = "dataSource" ref = "dataSource" />    
    </bean>

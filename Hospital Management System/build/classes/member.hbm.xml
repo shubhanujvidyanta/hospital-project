@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+<hibernate-mapping>
+   <class name="personal.shubhanuj.hospital.model.Member" table="MEMBER">
+      <meta attribute="class-description">
+         This class contains the member mapping. 
+      </meta>
+      <id name="memberId" type="int" column="member_id"/>
+      <property name="mbrroleId" column="mbrrole_id" type="int"/>
+      <property name="joinDate" column="joindate" type="string"/>
+      <property name="leaveDate" column="leavedate" type="string"/>
+   </class>
+</hibernate-mapping>
